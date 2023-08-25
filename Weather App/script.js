@@ -4,6 +4,7 @@ const API_KEY = "1ed0895d0fac92238eb0dc530ab761cc";
 //the api key is still not working.
 //going to try other Apis sources for the weather app
 
+//this function is for using the weather api
 const getWeatherDetails = (cityName, lat, lon) => {
     const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
 
@@ -13,7 +14,7 @@ const getWeatherDetails = (cityName, lat, lon) => {
         alert("An error occured while fetching the coordinates!");
     });
 }
-
+//this function is for geocoding api
 const getCityCoordinates = () =>{
     const cityName = cityInput.value.trim();
     if(!cityName) return;
